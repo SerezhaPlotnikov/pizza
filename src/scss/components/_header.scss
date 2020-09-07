@@ -1,0 +1,15 @@
+@import "variables";
+
+.header {
+  border-bottom: 1px solid #f7f7f7;
+  padding: 40px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+}
