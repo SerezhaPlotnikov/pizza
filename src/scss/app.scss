@@ -68,6 +68,13 @@ body {
   border: 2px solid #d3d3d3;
   width: 200px;
 }
+.button-black {
+  @extend %large-button;
+  background: #282828;
+  color: #fff;
+  border: 2px solid #282828;
+  width: 210px;
+}
 
 .changer {
   @extend %small-button;

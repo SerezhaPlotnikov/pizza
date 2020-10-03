@@ -1,0 +1,19 @@
+@import "../variables";
+
+.empty {
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 160px;
+    &-disc {
+      margin-top: 10px;
+      width: 550px;
+      text-align: center;
+    }
+    &-image {
+      margin: 60px 0;
+    }
+  }
+}

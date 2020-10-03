@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./assets/images/logo.png";
 import pizza1 from "./assets/images/pizza1.png";
+import empty from "./assets/images/shopping-cart-colour2.png";
 import "./scss/app.scss";
 
 function App() {
@@ -166,7 +167,6 @@ function App() {
         </div>
       </section>
       <section className='cart'>
-        {/* <div className='container'> */}
         <div className='cart__top'>
           <div className='cart__top-left'>Корзина</div>
           <div className='cart__top-rigth'>Очистить Корзину</div>
@@ -233,8 +233,20 @@ function App() {
           <div className='button-orange'>Оплатить сейчас</div>
         </div>
       </section>
+      <section className='empty'>
+        <div className='empty__box'>
+          <h2>Корзина пустая </h2>
+          <div className='empty__box-disc'>
+            Вероятней всего, вы не заказывали ещё пиццу.
+            <br /> Для того, чтобы заказать пиццу, перейди на главную страницу.
+          </div>
+          <div className='empty__box-image'>
+            <img src={empty} alt='empty' />
+          </div>
+          <div className='button-black'>Вернуться назад</div>
+        </div>
+      </section>
     </div>
   );
 }
-
 export default App;
