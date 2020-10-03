@@ -2,6 +2,9 @@
 
 .pizza-block {
   margin-bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   &__img {
@@ -63,6 +66,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 17px;
+    width: 100%;
     &-price {
       font-size: 22px;
       font-weight: 800;

@@ -39,7 +39,7 @@ function App() {
             </div>
             <div className='main__top-sort'>
               Сортировка по:
-              <span className='main__top-sort-popup'>популярности</span>
+              <span className='orange-text'>популярности</span>
             </div>
           </div>
           <div className='main__title'>
