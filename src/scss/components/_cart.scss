@@ -1,0 +1,50 @@
+@import "../variables";
+
+.cart {
+  position: relative;
+  margin: 0 auto;
+  width: 60%;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border-bottom: 1px solid #f4f4f4;
+  }
+  &__pizza-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #8d8d8d;
+    padding: 90px 0px;
+    height: 110px;
+    // margin: 30px 0;
+    & img {
+      width: 80px;
+      height: 80px;
+    }
+    &-title {
+      text-align: center;
+      align-items: center;
+    }
+    &-changer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__bottom {
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
+    &-text {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+    }
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

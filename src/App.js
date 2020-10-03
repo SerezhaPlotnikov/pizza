@@ -165,6 +165,84 @@ function App() {
           </div>
         </div>
       </section>
+      <section className='cart'>
+        {/* <div className='container'> */}
+        <div className='cart__top'>
+          <div className='cart__top-left'>Корзина</div>
+          <div className='cart__top-rigth'>Очистить Корзину</div>
+        </div>
+        <div className='cart__pizza-block'>
+          <img src={pizza1} alt='Pizza' />
+          <div className='cart__pizza-block-title'>
+            <h3>Сырный цыпленок</h3>
+            <p>тонкое тесто, 26 см.</p>
+          </div>
+          <div className='cart__pizza-block-changer'>
+            <div className='changer'>-</div>
+            <p>2</p>
+            <div className='changer'>+</div>
+          </div>
+          <div className='cart__pizza-block-price'>770P</div>
+          <div className='delete'>x</div>
+        </div>
+        <div className='cart__pizza-block'>
+          <img src={pizza1} alt='Pizza' />
+          <div className='cart__pizza-block-title'>
+            <h3>Сырный цыпленок</h3>
+            <p>тонкое тесто, 26 см.</p>
+          </div>
+          <div className='cart__pizza-block-changer'>
+            <div className='changer'>-</div>
+            <p>2</p>
+            <div className='changer'>+</div>
+          </div>
+          <div className='cart__pizza-block-price'>770P</div>
+          <div className='delete'>x</div>
+        </div>
+        <div className='cart__pizza-block'>
+          <img src={pizza1} alt='Pizza' />
+          <div className='cart__pizza-block-title'>
+            <h3>Сырный цыпленок</h3>
+            <p>тонкое тесто, 26 см.</p>
+          </div>
+          <div className='cart__pizza-block-changer'>
+            <div className='changer'>-</div>
+            <p>2</p>
+            <div className='changer'>+</div>
+          </div>
+          <div className='cart__pizza-block-price'>770P</div>
+          <div className='delete'>x</div>
+        </div>
+        <div className='cart__pizza-block'>
+          <img src={pizza1} alt='Pizza' />
+          <div className='cart__pizza-block-title'>
+            <h3>Сырный цыпленок</h3>
+            <p>тонкое тесто, 26 см.</p>
+          </div>
+          <div className='cart__pizza-block-changer'>
+            <div className='changer'>-</div>
+            <p>2</p>
+            <div className='changer'>+</div>
+          </div>
+          <div className='cart__pizza-block-price'>
+            <span className='bold-text'>770P</span>
+          </div>
+          <div className='delete'>x</div>
+        </div>
+        <div className='cart__bottom'></div>
+        <div className='cart__bottom-text'>
+          <p>
+            Всего пицц: <span className='def-text'>3шт</span>
+          </p>
+          <p>
+            Сумма заказа: <span className='orange-text'>900р</span>
+          </p>
+        </div>
+        <div className='cart__bottom-buttons'>
+          <div className='button-grey'> Вернуться назад</div>
+          <div className='button-orange'>Оплатить сейчас</div>
+        </div>
+      </section>
     </div>
   );
 }

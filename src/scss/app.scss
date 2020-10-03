@@ -33,3 +33,53 @@ body {
     grid-gap: 3vw;
   }
 }
+
+%small-button {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 12px;
+  cursor: pointer;
+}
+%large-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-weight: 800;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.button-orange {
+  @extend %large-button;
+  background: #fe5f1e;
+  color: #fff;
+  border: 2px solid #fff;
+  width: 200px;
+}
+
+.changer {
+  @extend %small-button;
+  color: #fe5f1e;
+  border: 2px solid #fe5f1e;
+}
+.delete {
+  @extend %small-button;
+  color: #d7d7d7;
+  border: 2px solid #d7d7d7;
+}
+%bold {
+  font-weight: bold;
+}
+.orange-text {
+  @extend %bold;
+  color: #fe5f1e;
+}
+.bold-text {
+  @extend %bold;
+  color: #000;
+}
