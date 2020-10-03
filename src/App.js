@@ -182,7 +182,9 @@ function App() {
             <p>2</p>
             <div className='changer'>+</div>
           </div>
-          <div className='cart__pizza-block-price'>770P</div>
+          <div className='cart__pizza-block-price'>
+            <span className='bold-text'>770P</span>
+          </div>
           <div className='delete'>x</div>
         </div>
         <div className='cart__pizza-block'>
@@ -196,21 +198,9 @@ function App() {
             <p>2</p>
             <div className='changer'>+</div>
           </div>
-          <div className='cart__pizza-block-price'>770P</div>
-          <div className='delete'>x</div>
-        </div>
-        <div className='cart__pizza-block'>
-          <img src={pizza1} alt='Pizza' />
-          <div className='cart__pizza-block-title'>
-            <h3>Сырный цыпленок</h3>
-            <p>тонкое тесто, 26 см.</p>
+          <div className='cart__pizza-block-price'>
+            <span className='bold-text'>770P</span>
           </div>
-          <div className='cart__pizza-block-changer'>
-            <div className='changer'>-</div>
-            <p>2</p>
-            <div className='changer'>+</div>
-          </div>
-          <div className='cart__pizza-block-price'>770P</div>
           <div className='delete'>x</div>
         </div>
         <div className='cart__pizza-block'>
@@ -232,7 +222,7 @@ function App() {
         <div className='cart__bottom'></div>
         <div className='cart__bottom-text'>
           <p>
-            Всего пицц: <span className='def-text'>3шт</span>
+            Всего пицц: <span className='bold-text'>3шт</span>
           </p>
           <p>
             Сумма заказа: <span className='orange-text'>900р</span>

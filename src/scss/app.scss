@@ -49,7 +49,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  font-weight: 800;
+  font-weight: 600;
   border-radius: 30px;
   cursor: pointer;
 }
@@ -59,6 +59,13 @@ body {
   background: #fe5f1e;
   color: #fff;
   border: 2px solid #fff;
+  width: 200px;
+}
+.button-grey {
+  @extend %large-button;
+  background: #fff;
+  color: #d3d3d3;
+  border: 2px solid #d3d3d3;
   width: 200px;
 }
 

@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
     // border-bottom: 1px solid #f4f4f4;
   }
   &__pizza-block {
@@ -36,6 +37,7 @@
     // display: flex;
     // justify-content: space-between;
     // flex-direction: column;
+    // margin-bottom: 130px;
     &-text {
       display: flex;
       justify-content: space-between;
@@ -45,6 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-bottom: 130px;
     }
   }
 }
