@@ -9,7 +9,7 @@ export function CartBox(props) {
     <div className='cart__pizza-block'>
       <img src={props.pizza1} alt='Pizza' />
       <div className='cart__pizza-block-title'>
-        <h3>{props.title}</h3>
+        <h3>{props.name}</h3>
         <p>
           {props.type}, {props.size}
         </p>

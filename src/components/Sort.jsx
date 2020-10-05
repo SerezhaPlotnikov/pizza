@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import "./scss/app.scss";
-
 const sortTypes = ["Популярности", "по цене", "по алфавиту"];
 export function Sort(props) {
   const sortRef = useRef();
