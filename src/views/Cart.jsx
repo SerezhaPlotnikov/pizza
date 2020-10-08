@@ -1,16 +1,14 @@
 import React from "react";
+import pizza1 from "../assets/images/pizza1.png";
 import { CartBox } from "../components/CartBox";
 import { Empty } from "./Empty";
 
 const pizzas = [
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
-  { name: "Meat Pizza", price: 100 },
+  { name: "Meat Pizza", price: 100, picture: pizza1 },
+  { name: "Meat Pizza", price: 100, picture: pizza1 },
+  { name: "Meat Pizza", price: 100, picture: pizza1 },
+  { name: "Meat Pizza", price: 100, picture: pizza1 },
+  { name: "Meat Pizza", price: 100, picture: pizza1 },
 ];
 const sizes = ["26cm", "30cm", "40cm"];
 const types = ["тонкое", " традиционное"];
@@ -97,6 +95,7 @@ export const Cart = () => {
           </div>
           {pizzas.map((pizza, i) => (
             <CartBox
+              picture={pizza.picture}
               key={i}
               type={types}
               size={sizes}

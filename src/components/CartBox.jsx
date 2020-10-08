@@ -7,7 +7,7 @@ export function CartBox(props) {
   const deletePizza = (e) => console.log(e);
   return (
     <div className='cart__pizza-block'>
-      <img src={props.pizza1} alt='Pizza' />
+      <img src={props.picture} alt='Pizza' />
       <div className='cart__pizza-block-title'>
         <h3>{props.name}</h3>
         <p>

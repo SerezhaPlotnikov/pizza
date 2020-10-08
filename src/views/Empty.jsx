@@ -1,4 +1,5 @@
 import React from "react";
+import EmptyCard from "../assets/images/empty-cart.png";
 import "../scss/app.scss";
 
 export function Empty() {
@@ -11,7 +12,7 @@ export function Empty() {
           <br /> Для того, чтобы заказать пиццу, перейди на главную страницу.
         </div>
         <div className='empty__box-image'>
-          <img src='/' alt='empty' />
+          <img src={EmptyCard} alt='empty' />
         </div>
         <div className='button-black'>Вернуться назад</div>
       </div>

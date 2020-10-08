@@ -1,6 +1,7 @@
 import React from "react";
 // import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 export const Header = () => {
   return (
@@ -8,7 +9,7 @@ export const Header = () => {
       <div className='container'>
         <Link to='/'>
           <div className='header__logo'>
-            <img src='/' alt='PizzaLOGO' />
+            <img src={logo} alt='PizzaLOGO' />
             <div>
               <h1>ReactPizza</h1>
               <p>самая вкусная пицца во вселенной</p>

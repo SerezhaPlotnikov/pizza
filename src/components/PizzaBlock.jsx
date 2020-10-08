@@ -5,8 +5,7 @@ export function PizzaBlock(props) {
   return (
     <div className='main__items'>
       <div className='pizza-block'>
-        {/* Не забыть перевести все через пропсы. сейчас для просто показательно */}
-        <img src='/' alt='pizza' className='pizza-block__img' />
+        <img src={props.picture} alt='pizza' className='pizza-block__img' />
         <h2 className='pizza-block__title'>{props.name}</h2>
         <div className='pizza-block__selector'>
           <div className='pizza-block__selector-style'>
