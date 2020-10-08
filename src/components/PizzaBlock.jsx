@@ -43,7 +43,7 @@ export function PizzaBlock(props) {
           </div>
         </div>
         <div className='pizza-block__bottom'>
-          <div className='pizza-block__bottom-price'>{props.price}</div>
+          <div className='pizza-block__bottom-price'>{props.price}$</div>
           <AddButton />
         </div>
       </div>

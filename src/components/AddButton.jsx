@@ -6,7 +6,7 @@ export function AddButton() {
       className='pizza-block__bottom-add'
       onClick={() => setValue(value + 1)}
     >
-      + Добавить |<span>{value}</span>
+      + Добавить | {value}
     </div>
   );
 }
