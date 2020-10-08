@@ -6,16 +6,54 @@ import { PizzaBlock } from "../components/PizzaBlock";
 import { Sort } from "../components/Sort";
 
 const pizzas = [
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
+  {
+    name: "Meat Pizza",
+    price: 100,
+    picture: pizza1,
+    types: [0, 1],
+    sizes: [20, 40],
+    category: 0,
+    rating: 4,
+  },
+  {
+    name: "Meat Pizza",
+    price: 100,
+    picture: pizza1,
+    types: [0, 1],
+    sizes: [20, 30],
+    category: 0,
+    rating: 4,
+  },
+  {
+    name: "Meat Pizza",
+    price: 100,
+    picture: pizza1,
+    types: [0, 1],
+    sizes: [40],
+    category: 0,
+    rating: 4,
+  },
+  {
+    name: "Meat Pizza",
+    price: 100,
+    picture: pizza1,
+    types: [0, 1],
+    sizes: [20, 30, 40],
+    category: 0,
+    rating: 4,
+  },
+  {
+    name: "Meat Pizza",
+    price: 100,
+    picture: pizza1,
+    types: [0, 1],
+    sizes: [20, 30, 40],
+    category: 0,
+    rating: 4,
+  },
 ];
-const sizes = ["26cm", "30cm", "40cm"];
-const types = ["тонкое", " традиционное"];
+// const sizes = ["26cm", "30cm", "40cm"];
+// const types = ["тонкое", " традиционное"];
 
 export const Main = () => {
   return (
@@ -34,8 +72,8 @@ export const Main = () => {
               picture={pizza.picture}
               key={i}
               name={pizza.name}
-              sizes={sizes}
-              types={types}
+              sizes={pizza.sizes}
+              types={pizza.types}
               price={pizza.price}
             />
           ))}

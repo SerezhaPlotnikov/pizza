@@ -1,7 +1,12 @@
-import React from "react";
+import classNames from "classnames";
+import React, { useState } from "react";
 import { AddButton } from "./AddButton";
 
 export function PizzaBlock(props) {
+  const sizesName = [26, 30, 40];
+  const typesName = ["тонкое", " традиционное"];
+  const [activeTypes, setActiveTypes] = useState(props.types[0]);
+  const [activeSizes, setActiveSizes] = useState(props.sizes[0]);
   return (
     <div className='main__items'>
       <div className='pizza-block'>
@@ -9,16 +14,30 @@ export function PizzaBlock(props) {
         <h2 className='pizza-block__title'>{props.name}</h2>
         <div className='pizza-block__selector'>
           <div className='pizza-block__selector-style'>
-            {props.types.map((type, index) => (
-              <div className='active' key={index}>
+            {typesName.map((type, index) => (
+              <div
+                key={index + index}
+                onClick={() => setActiveTypes(index)}
+                className={classNames({
+                  active: activeTypes === index,
+                  disabled: !props.types.includes(index),
+                })}
+              >
                 {type}
               </div>
             ))}
           </div>
           <div className='pizza-block__selector-size'>
-            {props.sizes.map((size, index) => (
-              <div className='active' key={index}>
-                {size}
+            {sizesName.map((size, index) => (
+              <div
+                onClick={() => setActiveSizes(index)}
+                className={classNames({
+                  active: activeSizes === index,
+                  disabled: !props.sizes.includes(size),
+                })}
+                key={index}
+              >
+                {size}cm.
               </div>
             ))}
           </div>
