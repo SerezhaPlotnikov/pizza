@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   &-categories {
-    // flex: 1;
     ul {
+      flex-wrap: wrap;
       display: flex;
       li {
         cursor: pointer;
@@ -14,6 +14,7 @@
         background: #f9f9f9;
         border-radius: 30px;
         margin-right: 10px;
+        margin-bottom: 10px;
         transition: background-color 0.1s ease-in-out;
         &:hover {
           background-color: darken(#f9f9f9, 2%);

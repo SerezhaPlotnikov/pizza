@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
-const sortTypes = ["Популярности", "по цене", "по алфавиту"];
+
 export function Sort(props) {
   const sortRef = useRef();
+  const sortTypes = ["Популярности", "по цене", "по алфавиту"];
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const activeLabel = sortTypes.find((obj) => obj.type === props.activeSortType)
-    .name;
+  const activeLabel = sortTypes.find(
+    (obj) => obj.type === props.activeSortType
+  );
 
   const toggleVisiblePopup = () => {
     setVisiblePopup(!visiblePopup);
@@ -56,7 +58,7 @@ export function Sort(props) {
                   className={props.activeSortType === obj.type ? "active" : ""}
                   key={`${obj.type}_${index}`}
                 >
-                  {obj.name}
+                  {obj}
                 </li>
               ))}
           </ul>
