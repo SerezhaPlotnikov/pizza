@@ -25,6 +25,7 @@ export function PizzaBlock({
       type: typesName[activeTypes],
     };
     onClickAddPizza(obj);
+    console.log(obj);
   };
   return (
     <div className='main__items'>

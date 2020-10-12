@@ -4,6 +4,7 @@ import { MainTypes } from "./types.js";
 const initialState = {
   data: [
     {
+      id: 1,
       name: "Meat Pizza",
       price: 100,
       picture: pizza1,
@@ -13,6 +14,7 @@ const initialState = {
       rating: 4,
     },
     {
+      id: 2,
       name: "Meat Pizza",
       price: 100,
       picture: pizza1,
@@ -22,6 +24,7 @@ const initialState = {
       rating: 4,
     },
     {
+      id: 3,
       name: "Meat Pizza",
       price: 100,
       picture: pizza1,
@@ -31,6 +34,7 @@ const initialState = {
       rating: 4,
     },
     {
+      id: 4,
       name: "Meat Pizza",
       price: 100,
       picture: pizza1,
@@ -40,6 +44,7 @@ const initialState = {
       rating: 4,
     },
     {
+      id: 5,
       name: "Meat Pizza",
       price: 100,
       picture: pizza1,
@@ -64,6 +69,13 @@ const reducer = (state = initialState, action) => {
     }
     case MainTypes.FETCH_ERROR: {
       return { ...state, loading: false, error: action.error };
+    }
+    case MainTypes.DELETE_PIZZA: {
+      return {
+        ...state,
+        loading: false,
+        selected: state.selected.filter((pizza) => pizza !== action.pizza),
+      };
     }
     case MainTypes.FETCH_SELECTED: {
       return {

@@ -4,4 +4,5 @@ export const MainTypes = {
   FETCH_ERROR: "@@pizza/FETCH_ERROR",
   FETCH_SELECTED: "@@pizza/FETCH_SELECTED",
   CLEAR_CART: "@@pizza/CLEAR_CART",
+  DELETE_PIZZA: "@@pizza/DELETE_PIZZA",
 };

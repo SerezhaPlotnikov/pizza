@@ -78,6 +78,7 @@ const Main = ({ pizzas, loading, AddPizza }) => {
               sizes={pizza.sizes}
               types={pizza.types}
               price={pizza.price}
+              id={pizza.id}
             />
           ))}
         </div>

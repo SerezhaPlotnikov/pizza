@@ -7,4 +7,5 @@ export const AddPizza = (selected) => ({
   type: MainTypes.FETCH_SELECTED,
   selected,
 });
+export const DeletePizza = (pizza) => ({ type: MainTypes.DELETE_PIZZA, pizza });
 export const ClearCart = () => ({ type: MainTypes.CLEAR_CART });

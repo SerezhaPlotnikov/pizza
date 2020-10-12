@@ -2,10 +2,10 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { CartBox } from "../components/CartBox";
-import { ClearCart } from "../redux/main/actions";
+import { ClearCart, DeletePizza } from "../redux/main/actions";
 import { Empty } from "./Empty";
 
-const Cart = ({ selected, ClearCart }) => {
+const Cart = ({ selected, ClearCart, DeletePizza }) => {
   const totalPrice = selected.reduce((a, b) => a + b.price, 0);
   return (
     <>
@@ -88,12 +88,15 @@ const Cart = ({ selected, ClearCart }) => {
           </div>
           {selected.map((pizza, i) => (
             <CartBox
-              picture={pizza.picture}
+              // id={pizza.id}
+              pizza={pizza}
+              DeletePizza={DeletePizza}
+              // picture={pizza.picture}
               key={i}
-              type={pizza.type}
-              size={pizza.size}
-              price={pizza.price}
-              name={pizza.name}
+              // type={pizza.type}
+              // size={pizza.size}
+              // price={pizza.price}
+              // name={pizza.name}
             />
           ))}
           <div className='cart__bottom'>
@@ -128,6 +131,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   ClearCart,
+  DeletePizza,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
