@@ -1,5 +1,5 @@
 import pizza1 from "../../assets/images/pizza1.png";
-// import { } from ;
+import { MainTypes } from "./types.js";
 
 const initialState = {
   data: [
@@ -56,16 +56,16 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case "FETCH_REQUEST": {
+    case MainTypes.FETCH_REQUEST: {
       return { ...state, loading: true };
     }
-    case "FETCH_SUCCESS": {
+    case MainTypes.FETCH_SUCCESS: {
       return { ...state, loading: false, data: action.data };
     }
-    case "FETCH_ERROR": {
+    case MainTypes.FETCH_ERROR: {
       return { ...state, loading: false, error: action.error };
     }
-    case "FETCH_SELECTED": {
+    case MainTypes.FETCH_SELECTED: {
       return {
         ...state,
         loading: false,
