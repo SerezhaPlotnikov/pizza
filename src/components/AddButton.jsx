@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-export function AddButton() {
-  const [value, setValue] = useState(0);
+import classNames from "classnames";
+import React from "react";
+
+export function AddButton({ onClick, className, children }) {
   return (
     <div
-      className='pizza-block__bottom-add'
-      onClick={() => setValue(value + 1)}
+      onClick={onClick}
+      className={classNames("button", className, {
+        "pizza-block__bottom-add": "pizza-block__bottom-add",
+      })}
     >
-      + Добавить | {value}
+      {children}
     </div>
   );
 }

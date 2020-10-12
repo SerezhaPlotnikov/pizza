@@ -2,16 +2,35 @@ import classNames from "classnames";
 import React, { useState } from "react";
 import { AddButton } from "./AddButton";
 
-export function PizzaBlock(props) {
+export function PizzaBlock({
+  id,
+  name,
+  picture,
+  price,
+  sizes,
+  types,
+  onClickAddPizza,
+}) {
   const sizesName = [26, 30, 40];
   const typesName = ["тонкое", " традиционное"];
-  const [activeTypes, setActiveTypes] = useState(props.types[0]);
-  const [activeSizes, setActiveSizes] = useState(props.sizes[0]);
+  const [activeTypes, setActiveTypes] = useState(types[0]);
+  const [activeSizes, setActiveSizes] = useState(sizes[0]);
+  const onAddPizza = () => {
+    const obj = {
+      id,
+      name,
+      picture,
+      price,
+      size: sizesName[activeSizes],
+      type: typesName[activeTypes],
+    };
+    onClickAddPizza(obj);
+  };
   return (
     <div className='main__items'>
       <div className='pizza-block'>
-        <img src={props.picture} alt='pizza' className='pizza-block__img' />
-        <h2 className='pizza-block__title'>{props.name}</h2>
+        <img src={picture} alt='pizza' className='pizza-block__img' />
+        <h2 className='pizza-block__title'>{name}</h2>
         <div className='pizza-block__selector'>
           <div className='pizza-block__selector-style'>
             {typesName.map((type, index) => (
@@ -20,7 +39,7 @@ export function PizzaBlock(props) {
                 onClick={() => setActiveTypes(index)}
                 className={classNames({
                   active: activeTypes === index,
-                  disabled: !props.types.includes(index),
+                  disabled: !types.includes(index),
                 })}
               >
                 {type}
@@ -33,7 +52,7 @@ export function PizzaBlock(props) {
                 onClick={() => setActiveSizes(index)}
                 className={classNames({
                   active: activeSizes === index,
-                  disabled: !props.sizes.includes(size),
+                  disabled: !sizes.includes(size),
                 })}
                 key={index}
               >
@@ -43,8 +62,8 @@ export function PizzaBlock(props) {
           </div>
         </div>
         <div className='pizza-block__bottom'>
-          <div className='pizza-block__bottom-price'>{props.price}$</div>
-          <AddButton />
+          <div className='pizza-block__bottom-price'>{price}$</div>
+          <AddButton onClick={onAddPizza} children={`+ Добавить |`} />
         </div>
       </div>
     </div>

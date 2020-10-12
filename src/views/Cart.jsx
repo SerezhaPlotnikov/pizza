@@ -1,19 +1,12 @@
 import React from "react";
-import pizza1 from "../assets/images/pizza1.png";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { CartBox } from "../components/CartBox";
+import { ClearCart } from "../redux/main/actions";
 import { Empty } from "./Empty";
 
-const pizzas = [
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-  { name: "Meat Pizza", price: 100, picture: pizza1 },
-];
-const sizes = ["26cm", "30cm", "40cm"];
-const types = ["тонкое", " традиционное"];
-const totalPrice = pizzas.reduce((a, b) => a + b.price, 0);
-export const Cart = () => {
+const Cart = ({ selected, ClearCart }) => {
+  const totalPrice = selected.reduce((a, b) => a + b.price, 0);
   return (
     <>
       {totalPrice > 0 ? (
@@ -53,7 +46,7 @@ export const Cart = () => {
                 Корзина
               </h2>
             </div>
-            <div className='cart__top-rigth'>
+            <div className='cart__top-rigth' onClick={() => ClearCart()}>
               <svg
                 width='20'
                 height='20'
@@ -93,12 +86,12 @@ export const Cart = () => {
               Очистить Корзину
             </div>
           </div>
-          {pizzas.map((pizza, i) => (
+          {selected.map((pizza, i) => (
             <CartBox
               picture={pizza.picture}
               key={i}
-              type={types}
-              size={sizes}
+              type={pizza.type}
+              size={pizza.size}
               price={pizza.price}
               name={pizza.name}
             />
@@ -106,8 +99,8 @@ export const Cart = () => {
           <div className='cart__bottom'>
             <div className='cart__bottom-text'>
               <p>
-                Всего пицц:{" "}
-                <span className='bold-text'>{pizzas.length}шт.</span>
+                Всего пицц:
+                <span className='bold-text'>{selected.length}шт.</span>
               </p>
               <p>
                 Сумма заказа:
@@ -115,7 +108,9 @@ export const Cart = () => {
               </p>
             </div>
             <div className='cart__bottom-buttons'>
-              <div className='button-grey'> Вернуться назад</div>
+              <Link to='/' className='button-grey'>
+                Вернуться назад
+              </Link>
               <div className='button-orange'>Оплатить сейчас</div>
             </div>
           </div>
@@ -127,8 +122,12 @@ export const Cart = () => {
   );
 };
 
-// const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  selected: state.selected,
+});
 
-// const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  ClearCart,
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Cart);
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

@@ -72,6 +72,13 @@ const reducer = (state = initialState, action) => {
         selected: [...state.selected, action.selected],
       };
     }
+    case MainTypes.CLEAR_CART: {
+      return {
+        ...state,
+        loading: false,
+        selected: [],
+      };
+    }
     default:
       return state;
   }

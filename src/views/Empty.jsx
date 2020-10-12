@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EmptyCard from "../assets/images/empty-cart.png";
 import "../scss/app.scss";
 
@@ -14,7 +15,9 @@ export function Empty() {
         <div className='empty__box-image'>
           <img src={EmptyCard} alt='empty' />
         </div>
-        <div className='button-black'>Вернуться назад</div>
+        <Link to='/' className='button-black'>
+          Вернуться назад
+        </Link>
       </div>
     </section>
   );

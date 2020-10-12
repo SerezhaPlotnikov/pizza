@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Categories } from "../components/Categories";
 import { PizzaBlock } from "../components/PizzaBlock";
 import { Sort } from "../components/Sort";
+import { AddPizza } from "../redux/main/actions";
 
 // const pizzas = [
 //   {
@@ -55,7 +56,8 @@ import { Sort } from "../components/Sort";
 // const sizes = ["26cm", "30cm", "40cm"];
 // const types = ["тонкое", " традиционное"];
 
-const Main = ({ pizzas, loading }) => {
+const Main = ({ pizzas, loading, AddPizza }) => {
+  // const AddPizza = (e) => console.log(e);
   return (
     <section className='main'>
       <div className='container'>
@@ -69,6 +71,7 @@ const Main = ({ pizzas, loading }) => {
         <div className='main__items'>
           {pizzas.map((pizza, i) => (
             <PizzaBlock
+              onClickAddPizza={AddPizza}
               picture={pizza.picture}
               key={i}
               name={pizza.name}
@@ -88,6 +91,8 @@ const mapStateToProps = (state) => ({
   loading: state.loading,
 });
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  AddPizza,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main);
